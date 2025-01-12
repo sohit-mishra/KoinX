@@ -1,26 +1,21 @@
-// AllChart.jsx
 import React from 'react';
-import { Flex } from '@chakra-ui/react';
-import BNB from '../components/Chart/BNB'; 
+import { Box, Flex } from '@chakra-ui/react';
+import BNB from '../components/Chart/BNB'; // Importing BNB component
 
 export default function AllChart() {
   return (
-    <Flex
-      wrap="nowrap" // Ensures all items are in one row
-      justify="space-between"
-      p={4}
-      bg="gray.50"
-    >
-      {/* {Array(5).fill(0).map((_, index) => (
-        <Flex
-          key={index}
-          width="19%"
-          minWidth="180px"
-          p={2}
-        >
-          <BNB />
-        </Flex>
-      ))} */}
-    </Flex>
+    <Box width="100%" p={4}>
+      <Flex
+        justify="space-between" // Space out the items evenly
+      
+        width="100%"
+      >
+        {Array(5).fill(0).map((_, index) => (
+          <Box key={index} width={{ base: "100%", sm: "48%", md: "18%" }} p={2} height={165} overflow={'hidden'}>
+            <BNB />
+          </Box>
+        ))}
+      </Flex>
+    </Box>
   );
 }

@@ -53,7 +53,7 @@ export default function Sentiment() {
   };
 
   return (
-    <Box p="40px" mt={20} bg="white" borderRadius="md" shadow="sm" w="100%">
+    <Box p="40px" mt={5} bg="white" borderRadius="md" shadow="sm" w="100%">
       <Box mb={6}>
         <Heading as="h3" size="lg" fontWeight="bold">
           Sentiment

@@ -1,7 +1,7 @@
 // TradingViewWidget.jsx
 import React, { useEffect, useRef, memo } from 'react';
 import { Box, Link, Text } from '@chakra-ui/react';
-import {ArrowRightIcon} from '@chakra-ui/icons';
+import { ArrowRightIcon } from '@chakra-ui/icons';
 
 function TradingViewWidget() {
   const containerRef = useRef();
@@ -63,8 +63,8 @@ function TradingViewWidget() {
       h="80vh"
       overflow="hidden"
     >
-      <Text fontSize="xl" fontWeight="bold"  textAlign="left" mb={4}>
-        Cryptocurrencies <ArrowRightIcon boxSize={3}  color='grey' /> Bitcoin
+      <Text fontSize="xl" fontWeight="bold" textAlign="left" mb={4}>
+        Cryptocurrencies <ArrowRightIcon boxSize={3} color='grey' /> Bitcoin
       </Text>
       <Box ref={containerRef} w="100%" h="100%">
         <Box className="tradingview-widget-container__widget" />

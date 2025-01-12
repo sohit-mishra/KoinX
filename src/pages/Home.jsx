@@ -15,16 +15,16 @@ export default function Home() {
       <Box
         flex={{ base: 1, md: 3 }}
         p={4}
-        width="100%" 
-        mt={{ base: '20px', md: '0' }} 
+        width="100%"
+        mt={{ base: '20px', md: '0' }}
       >
-        <Chart/>
-
-        <Sentiment/>
+        <Chart />
+        <Insight />
+        <Sentiment />
         <About />
-        <Tokenomics/>
-        <Team/>
-        <Insight/>
+        <Tokenomics />
+        <Team />
+
         <AllChart/>
       </Box>
 
@@ -32,7 +32,7 @@ export default function Home() {
         flex={{ base: 1, md: 1 }}
         p={'0 40px'}
         width="100%"
-        mt={{ base: '20px', md: '10' }} 
+        mt={{ base: '20px', md: '10' }}
       >
         <Card />
         <Trending />

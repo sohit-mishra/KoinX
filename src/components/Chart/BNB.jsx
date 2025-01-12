@@ -1,4 +1,3 @@
-// BNB.jsx
 import React, { useEffect, useRef } from 'react';
 import { Box } from '@chakra-ui/react';
 
@@ -13,27 +12,29 @@ const BNB = () => {
       {
         "symbol": "CRYPTOCAP:BNB",
         "width": "100%",
-        "height": "200",
+        "height": "100%",
         "locale": "en",
         "colorTheme": "light",
         "isTransparent": false,
-        "autosize": true
+        "autosize": true,
+        "marginbottom": 10
       }
     `;
     containerRef.current.appendChild(script);
   }, []);
 
   return (
-    <Box
-      ref={containerRef}
-      w="300px"
-      h="220px"
-      bg="white"
-      borderRadius="md"
-      shadow="md"
-      m={2}
-      mt={10}
-    />
+    <Box>
+      <Box
+        ref={containerRef}
+        w="100%"
+        h="100%"
+        bg="white"
+        borderRadius="md"
+        shadow="md"
+        mb={4} // Margin to create space between charts
+      />
+    </Box>
   );
 };
 

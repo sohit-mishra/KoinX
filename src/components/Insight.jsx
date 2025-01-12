@@ -7,6 +7,8 @@ import {
   Heading,
   Text,
 } from '@chakra-ui/react';
+import Fundamentals from './Fundamentals';
+import Performance from './Performance';
 
 export default function Insight() {
 
@@ -27,7 +29,7 @@ export default function Insight() {
   const renderContent = () => {
     switch (activeTab) {
       case 'Overview':
-        return <Text fontSize="lg">This is the Overview content.</Text>;
+        return <Text fontSize="lg"><Performance/></Text>;
       case 'Fundamentals':
         return <Text fontSize="lg">Here are the Fundamentals details.</Text>;
       case 'News Insights':
@@ -46,7 +48,7 @@ export default function Insight() {
   };
 
   return (
-    <Box>
+    <Box mt={10} p={4}>
     
       <Flex
         direction="row"
@@ -54,6 +56,7 @@ export default function Insight() {
         overflow="hidden"
         w="100%"
         pb={2}
+        mt={10}
         borderBottom="1px solid #e7dbdb"
         bg={useColorModeValue('white', 'gray.800')}
       >
@@ -103,6 +106,8 @@ export default function Insight() {
         </Heading>
         {renderContent()}
       </Box>
+
+      <Fundamentals/>
     </Box>
   );
 }
