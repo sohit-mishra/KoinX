@@ -47,15 +47,15 @@ export default function Sentiment() {
     setIsAnimating(true);
 
     setTimeout(() => {
-      setCurrent((prev) => (prev + 1) % (data.length/2));
+      setCurrent((prev) => (prev + 1) % (data.length / 2));
       setIsAnimating(false);
     }, 300);
   };
 
   return (
-    <Box p="40px" mt={5} bg="white" borderRadius="md" shadow="sm" w="100%">
+    <Box p={{ base: '20px', md: '40px' }} mt={5} bg="white" borderRadius="md" shadow="sm" w="100%">
       <Box mb={6}>
-        <Heading as="h3" size="lg" fontWeight="bold">
+        <Heading as="h3" size="lg" fontWeight="bold" textAlign={{ base: 'center', md: 'left' }}>
           Sentiment
         </Heading>
         <Heading display="flex" as="h4" size="md" mt={5}>
@@ -77,7 +77,7 @@ export default function Sentiment() {
         </Heading>
       </Box>
 
-      <Flex overflow="hidden" position="relative" width="100%" height="180px">
+      <Flex overflow="hidden" position="relative" width="100%" height={{ base: 'auto', md: '180px' }} direction={{ base: 'column', md: 'row' }}>
         <Flex
           position="absolute"
           direction="row"
@@ -85,17 +85,17 @@ export default function Sentiment() {
           transform={`translateX(-${current * 50}%)`}
           transition="transform 0.3s ease-in-out"
         >
-          {data.map((event, index) => (
-            <Box key={event.id} width="50%" px={5}>
+          {data.map((event) => (
+            <Box key={event.id} width={{ base: '100%', md: '50%' }} px={{ base: 2, md: 5 }} mb={{ base: 5, md: 0 }}>
               <Flex align="flex-start">
-                <Box width="18%">
-                  <Image src={event.image} alt="Event Image" w="80%" />
+                <Box width={{ base: '20%', md: '18%' }}>
+                  <Image src={event.image} alt="Event Image" w="100%" />
                 </Box>
-                <Box width="85%" pl={4}>
-                  <Text fontSize="md" fontWeight="semibold">
+                <Box width="85%" pl={{ base: 2, md: 4 }}>
+                  <Text fontSize="md" fontWeight="semibold" textAlign={{ base: 'center', md: 'left' }}>
                     {event.title}
                   </Text>
-                  <Text fontSize="sm" mt={2} color="gray.600">
+                  <Text fontSize="sm" mt={2} color="gray.600" textAlign="justify">
                     {event.paragraph}
                   </Text>
                 </Box>

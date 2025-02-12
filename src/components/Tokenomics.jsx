@@ -1,32 +1,47 @@
-import { Box, Text, Flex, Image, Circle } from '@chakra-ui/react'
-import CircleImage from '../assets/Circle.svg'
-
+import { Box, Text, Flex, Image, Circle } from '@chakra-ui/react';
+import CircleImage from '../assets/Circle.svg';
 
 export default function Tokenomics() {
   return (
-    <Box p="40px" bg="white" color="black" width="100%">
-      <Text fontSize="3xl" fontWeight="bold" mb={4}>
+    <Box p={{ base: '20px', md: '40px' }} bg="white" color="black" width="100%">
+      {/* Title */}
+      <Text fontSize={{ base: '2xl', md: '3xl' }} fontWeight="bold" mb={4}>
         Tokenomics
       </Text>
 
-      <Text fontSize="xl" fontWeight="bold" mb={4}>
+      {/* Section Title */}
+      <Text fontSize={{ base: 'lg', md: 'xl' }} fontWeight="bold" mb={4}>
         Initial Distribution
       </Text>
 
-      <Flex alignItems="center" gap={4} mb={4}>
-        <Image src={CircleImage} />
-        <Flex direction="column">
+      {/* Image and Distribution Info */}
+      <Flex
+        alignItems="center"
+        gap={{ base: 2, md: 4 }}
+        mb={4}
+        direction={{ base: 'column', md: 'row' }}
+      >
+        <Image
+          src={CircleImage}
+          boxSize={{ base: '150px', md: '200px' }}
+          alt="Initial Distribution Chart"
+        />
+        
+        <Flex direction="column" gap={2}>
           <Flex alignItems="center" gap={2}>
             <Circle size="10px" bg="rgba(0, 130, 255, 1)" />
-            <Text>Crowdsale Investors: 80%</Text>
+            <Text fontSize={{ base: 'sm', md: 'md' }}>Crowdsale Investors: 80%</Text>
           </Flex>
+
           <Flex alignItems="center" gap={2}>
             <Circle size="10px" bg="rgba(250, 160, 2, 1)" />
-            <Text>Foundation: 20%</Text>
+            <Text fontSize={{ base: 'sm', md: 'md' }}>Foundation: 20%</Text>
           </Flex>
         </Flex>
       </Flex>
-      <Text>
+
+      {/* Description Text */}
+      <Text fontSize={{ base: 'sm', md: 'md' }} textAlign="justify">
         Lorem ipsum dolor sit amet consectetur. Cras aliquet tristique ornare
         vestibulum nunc dignissim vel consequat. Leo etiam nascetur bibendum amet
         enim sit eget leo amet. At metus orci augue fusce eleifend lectus eu fusce
@@ -37,5 +52,5 @@ export default function Tokenomics() {
         odio nisi eu ac risus.
       </Text>
     </Box>
-  )
+  );
 }

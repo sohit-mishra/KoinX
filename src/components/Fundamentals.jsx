@@ -21,25 +21,24 @@ export default function Fundamentals() {
   ];
 
   return (
-    <Box p={4} bg="gray.50" borderRadius="md" boxShadow="sm" mx="auto">
-      <Heading display="flex" as="h4" size="md" mb={4}>
+    <Box p={6} bg="gray.50" borderRadius="lg" boxShadow="md" mx="auto">
+      <Heading display="flex" as="h4" size="md" mb={4} alignItems="center">
         Fundamentals
         <Box
           as="span"
           width="30px"
           height="30px"
-          borderRadius="50%"
+          borderRadius="full"
           bg="white"
           display="flex"
           justifyContent="center"
           alignItems="center"
           ml={2}
         >
-          <Icon as={WarningIcon} color="gray" />
+          <Icon as={WarningIcon} color="gray.500" />
         </Box>
       </Heading>
 
-      {/* Wrap the section into 2 columns, each taking up 50% width */}
       <Flex flexWrap="wrap" justify="space-between">
         {data.map((item, index) => (
           <Flex
@@ -47,15 +46,14 @@ export default function Fundamentals() {
             justify="space-between"
             align="center"
             borderBottom="1px solid #e7dbdb"
-            py={2}
-            width="48%" // Set width to 48% for two items per row
-            whiteSpace="nowrap"
-            mb={2} // Add margin at the bottom for spacing
+            py={3}
+            width={{ base: '100%', md: '48%' }}
+            mb={2}
           >
             <Text fontSize="sm" fontWeight="semibold" color="gray.600">
               {item.label}
             </Text>
-            <Text fontSize="sm" fontWeight="medium" color="gray.800">
+            <Text fontSize="sm" fontWeight="medium" color="gray.800" textAlign="right">
               {item.value}
             </Text>
           </Flex>
