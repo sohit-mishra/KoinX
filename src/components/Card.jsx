@@ -1,6 +1,6 @@
 import { Box, Heading, Text, Button, Image, Flex } from '@chakra-ui/react';
 import { ArrowForwardIcon } from '@chakra-ui/icons';
-import Frame from '../assets/frame.svg';
+import Frame from '../assets/Frame.svg';
 
 export default function Card() {
   return (
